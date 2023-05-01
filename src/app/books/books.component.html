@@ -1,0 +1,10 @@
+<h2>Programming books list!</h2>
+<button [disabled]="disableButton" (click)="handleClick()">Show books</button>
+<ul>
+    <li *ngFor="let book of books">
+        <img width="100" [src]="book.imgSrc" alt="{{ book.name }}" />
+        {{ book.name }}
+        by
+        {{ book.author }}
+    </li>
+</ul>
