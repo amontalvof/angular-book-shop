@@ -1,5 +1,8 @@
 <h2>Programming books list!</h2>
 <button [disabled]="disableButton" (click)="handleClick()">Show books</button>
+<!-- <input type="text" (input)="handleInput($event)" /> -->
+<input type="text" [(ngModel)]="myName" />
+<p>{{ myName }}</p>
 <ul>
     <li *ngFor="let book of books">
         <img width="100" [src]="book.imgSrc" alt="{{ book.name }}" />
