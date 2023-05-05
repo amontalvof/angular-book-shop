@@ -8,9 +8,10 @@
         <li>
             {{ i + 1 }}
             <img width="100" [src]="book.imgSrc" alt="{{ book.name }}" />
-            {{ book.name }}
+            {{ book.name | titlecase }}
             by
-            {{ book.author }}
+            {{ book.author | titlecase }}
+            <p>{{ book.price | currency }}</p>
         </li>
     </ng-container>
 </ul>

@@ -8,14 +8,16 @@ import { Component } from '@angular/core';
 export class BooksComponent {
     books = [
         {
-            name: 'Clean Code',
-            author: 'Robert C. Martin',
+            name: 'clean code',
+            author: 'robert c. martin',
             imgSrc: 'https://images-na.ssl-images-amazon.com/images/I/41jEbK-jG+L._SX258_BO1,204,203,200_.jpg',
+            price: 20,
         },
         {
-            name: 'The Pragmatic Programmer',
-            author: 'Andrew Hunt and David Thomas',
+            name: 'the pragmatic programmer',
+            author: 'andrew hunt and david thomas',
             imgSrc: 'https://images-na.ssl-images-amazon.com/images/I/41as+WafrFL._SX258_BO1,204,203,200_.jpg',
+            price: 30,
         },
     ];
     isShowing = true;
