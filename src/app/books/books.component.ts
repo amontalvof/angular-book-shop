@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
     styleUrls: ['./books.component.css'],
 })
 export class BooksComponent {
-    disableButton = false;
     books = [
         {
             name: 'Clean Code',
@@ -19,11 +18,5 @@ export class BooksComponent {
             imgSrc: 'https://images-na.ssl-images-amazon.com/images/I/41as+WafrFL._SX258_BO1,204,203,200_.jpg',
         },
     ];
-    myName = '';
-    // handleInput(event: any) {
-    //     this.myName = event.target.value;
-    // }
-    handleClick() {
-        this.disableButton = true;
-    }
+    isShowing = true;
 }

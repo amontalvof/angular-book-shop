@@ -1,13 +1,16 @@
 <h2>Programming books list!</h2>
-<button [disabled]="disableButton" (click)="handleClick()">Show books</button>
-<!-- <input type="text" (input)="handleInput($event)" /> -->
-<input type="text" [(ngModel)]="myName" />
-<p>{{ myName }}</p>
-<ul>
-    <li *ngFor="let book of books">
-        <img width="100" [src]="book.imgSrc" alt="{{ book.name }}" />
-        {{ book.name }}
-        by
-        {{ book.author }}
-    </li>
+<button (click)="isShowing = !isShowing">
+    <ng-container *ngIf="!isShowing">Show books</ng-container>
+    <ng-container *ngIf="isShowing">Hide books</ng-container>
+</button>
+<ul *ngIf="isShowing">
+    <ng-container *ngFor="let book of books; let i = index">
+        <li>
+            {{ i + 1 }}
+            <img width="100" [src]="book.imgSrc" alt="{{ book.name }}" />
+            {{ book.name }}
+            by
+            {{ book.author }}
+        </li>
+    </ng-container>
 </ul>
