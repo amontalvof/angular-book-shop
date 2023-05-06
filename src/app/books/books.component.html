@@ -5,13 +5,15 @@
 </button>
 <ul *ngIf="isShowing">
     <ng-container *ngFor="let book of books; let i = index">
-        <li>
-            {{ i + 1 }}
+        <li class="book">
+            <p class="sno">{{ i + 1 }}</p>
             <img width="100" [src]="book.imgSrc" alt="{{ book.name }}" />
-            {{ book.name | titlecase }}
-            by
-            {{ book.author | titlecase }}
-            <p>{{ book.price | currency }}</p>
+            <p class="title">
+                {{ book.name | titlecase }}
+                by
+                {{ book.author | titlecase }}
+            </p>
+            <p class="currency">{{ book.price | currency }}</p>
         </li>
     </ng-container>
 </ul>
