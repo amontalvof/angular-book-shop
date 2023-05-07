@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Book } from '../types/Book';
 
 @Component({
     selector: 'app-books',
@@ -6,7 +7,7 @@ import { Component } from '@angular/core';
     styleUrls: ['./books.component.css'],
 })
 export class BooksComponent {
-    books = [
+    books: Book[] = [
         {
             name: 'clean code',
             author: 'robert c. martin',
