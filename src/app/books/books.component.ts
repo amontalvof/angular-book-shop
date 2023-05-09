@@ -34,4 +34,5 @@ export class BooksComponent {
         },
     ];
     isShowing = true;
+    cart: Book[] = [];
 }
