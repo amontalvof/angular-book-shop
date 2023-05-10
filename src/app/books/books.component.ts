@@ -35,4 +35,8 @@ export class BooksComponent {
     ];
     isShowing = true;
     cart: Book[] = [];
+
+    addToCart(event: Book) {
+        this.cart.push(event);
+    }
 }
