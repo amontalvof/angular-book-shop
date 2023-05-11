@@ -1,4 +1,4 @@
-# Angular Book Shop
+# Angular Book Shop App
 
 ## Technologies
 
