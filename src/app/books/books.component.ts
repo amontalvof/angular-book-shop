@@ -36,6 +36,13 @@ export class BooksComponent {
     isShowing = true;
     cart: Book[] = [];
 
+    ngOnInit() {
+        console.log(
+            `%c****************ngOnInit********************`,
+            'color: black; background: cyan'
+        );
+    }
+
     addToCart(event: Book) {
         this.cart.push(event);
     }
