@@ -9,19 +9,6 @@ import { Book } from '../types/Book';
 export class BookComponent {
     @Input() book: Book = {} as Book;
     @Output() bookEmitter = new EventEmitter<Book>();
-    myInterval: any = null;
-    ngOnInit() {
-        this.myInterval = setInterval(() => {
-            console.log(this.book.name);
-        }, 1000);
-    }
-    ngOnDestroy() {
-        clearInterval(this.myInterval);
-        console.log(
-            `%c*****************ngOnDestroy*******************`,
-            'color: black; background: cyan'
-        );
-    }
 
     addToCart() {
         this.bookEmitter.emit(this.book);
