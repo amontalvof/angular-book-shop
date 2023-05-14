@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Book } from '../types/Book';
+import { Book } from '../../types/Book';
 import { BooksService } from './books.service';
 
 @Component({
@@ -14,9 +14,4 @@ export class BooksComponent {
 
     books: Book[] = [];
     isShowing = true;
-    cart: Book[] = [];
-
-    addToCart(event: Book) {
-        this.cart.push(event);
-    }
 }
